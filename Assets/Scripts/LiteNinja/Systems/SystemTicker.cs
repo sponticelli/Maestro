@@ -4,6 +4,11 @@ using UnityEngine;
 namespace LiteNinja.Systems
 {
     
+    /// <summary>
+    /// Add all the systems (tickable, fixedTickable, fullTickable) of the children
+    /// Initialize the systems
+    /// Update the systems
+    /// </summary>
     public class SystemTicker : MonoBehaviour, ISystemFullTicker
     {
         private List<ITickableSystem> _tickableSystems;
@@ -22,9 +27,9 @@ namespace LiteNinja.Systems
             _fixedTickableSystems = new List<IFixedTickableSystem>();
             _fullTickableSystems = new List<IFullTickableSystem>();
 
-            _tickableSystems.AddRange(GetComponents<ITickableSystem>());
-            _fixedTickableSystems.AddRange(GetComponents<IFixedTickableSystem>());
-            _fullTickableSystems.AddRange(GetComponents<IFullTickableSystem>());
+            _tickableSystems.AddRange(GetComponentsInChildren<ATickableSystem>());
+            _fixedTickableSystems.AddRange(GetComponentsInChildren<AFixedTickableSystem>());
+            _fullTickableSystems.AddRange(GetComponentsInChildren<AFullTickableSystem>());
 
             foreach (var system in _tickableSystems)
             {
