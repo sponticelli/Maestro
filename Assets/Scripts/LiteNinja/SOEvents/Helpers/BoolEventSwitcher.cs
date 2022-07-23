@@ -7,6 +7,7 @@ namespace LiteNinja.Events.Helpers
     /// <summary>
     /// An helper to emit BoolEvent events alternating between true and false.
     /// </summary>
+    [AddComponentMenu("LiteNinja/Components/Bool Event Switcher")]
     public class BoolEventSwitcher : MonoBehaviour
     {
         [SerializeField] private BoolEvent _boolEvent;
