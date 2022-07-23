@@ -2,7 +2,8 @@
     "name": "Maestro.Systems",
     "rootNamespace": "",
     "references": [
-        "GUID:a2badd3d4844441e58ad7125b5111903"
+        "GUID:a2badd3d4844441e58ad7125b5111903",
+        "GUID:4a2568bc2748c4f17b613a2048233910"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
