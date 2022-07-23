@@ -1,6 +1,6 @@
 namespace LiteNinja.Systems
 {
-    public interface ISystemFixedTicker : IInitializable, IFixedTicker
+    public interface ISystemFixedTicker : ISystem, IFixedTicker
     {
         
     }

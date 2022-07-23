@@ -1,6 +1,6 @@
 namespace LiteNinja.Systems
 {
-    public interface IFullTickableSystem : IInitializable, IPausable, ITickable, IFixedTickable
+    public interface IFullTickableSystem : ISystem, IPausable, ITickable, IFixedTickable
     {
     }
 }
