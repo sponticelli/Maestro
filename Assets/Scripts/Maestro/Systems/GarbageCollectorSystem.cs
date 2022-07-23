@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Maestro.Systems
 {
+    [AddComponentMenu("Maestro/Systems/Garbage Collector")]
     public class GarbageCollectorSystem : ATickableSystem
     {
         protected override void OnLoadSystem()
