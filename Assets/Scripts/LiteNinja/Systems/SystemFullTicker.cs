@@ -16,7 +16,8 @@ namespace LiteNinja.Systems
         private List<IFixedTickableSystem> _fixedTickableSystems;
         private List<IFullTickableSystem> _fullTickableSystems;
 
-
+        private bool _isInitialized;
+        
         private void Awake()
         {
             Initialize();
@@ -24,6 +25,9 @@ namespace LiteNinja.Systems
 
         public void Initialize()
         {
+            if (_isInitialized)
+                return;
+            
             _tickableSystems = new List<ITickableSystem>();
             _fixedTickableSystems = new List<IFixedTickableSystem>();
             _fullTickableSystems = new List<IFullTickableSystem>();
@@ -46,8 +50,33 @@ namespace LiteNinja.Systems
             {
                 system.Initialize();
             }
+            
+            _isInitialized = true;
         }
-        
+
+        public void Deinitialize()
+        {
+            if (!_isInitialized)
+                return;
+
+            foreach (var system in _tickableSystems)
+            {
+                system.Deinitialize();
+            }
+            
+            foreach (var system in _fixedTickableSystems)
+            {
+                system.Deinitialize();
+            }
+            
+            foreach (var system in _fullTickableSystems)
+            {
+                system.Deinitialize();
+            }
+            
+            _isInitialized = false;
+        }
+
         private void Update()
         {
             Tick(Time.deltaTime);

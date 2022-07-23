@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using NotImplementedException = System.NotImplementedException;
 
 namespace LiteNinja.Systems
 {
@@ -8,13 +7,26 @@ namespace LiteNinja.Systems
     public class SystemTicker : MonoBehaviour, ISystemTicker
     {
         private List<ITickableSystem> _tickableSystems;
+        private bool _isInitialized;
+        
         private void Awake()
         {
             Initialize();
         }
 
+        private void OnEnable()
+        {
+            Initialize();
+        }
+
+        private void OnDisable()
+        {
+            Deinitialize();
+        }
+
         public void Initialize()
         {
+            if (_isInitialized) return;
             _tickableSystems = new List<ITickableSystem>();
             _tickableSystems.AddRange(GetComponentsInChildren<ATickableSystem>());
 
@@ -23,9 +35,20 @@ namespace LiteNinja.Systems
                 system.Initialize();
             }
 
- 
+            _isInitialized = true;
         }
-        
+
+        public void Deinitialize()
+        {
+            if (!_isInitialized) return;
+            foreach (var system in _tickableSystems)
+            {
+                system.Deinitialize();
+            }
+
+            _isInitialized = false;
+        }
+
         private void Update()
         {
             Tick(Time.deltaTime);

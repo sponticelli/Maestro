@@ -19,8 +19,17 @@ namespace LiteNinja.Systems
             OnLoadSystem();
             _isInitialized = true;
         }
+        
+        public void Deinitialize()
+        {
+            if (!_isInitialized) return;
+
+            OnUnloadSystem();
+            _isInitialized = false;
+        }
 
         protected abstract void OnLoadSystem();
+        protected abstract void OnUnloadSystem();
 
         public void Pause(bool state)
         {

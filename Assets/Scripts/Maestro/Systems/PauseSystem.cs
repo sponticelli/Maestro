@@ -1,4 +1,3 @@
-using System;
 using LiteNinja.SOEvents;
 using LiteNinja.Systems;
 using UnityEngine;
@@ -19,6 +18,11 @@ namespace Maestro.Systems
         protected override void OnLoadSystem()
         {
             _requestPause?.Register(OnRequestPause);
+        }
+
+        protected override void OnUnloadSystem()
+        {
+            _isPaused = false;
         }
 
         private void SetPaused(bool state)

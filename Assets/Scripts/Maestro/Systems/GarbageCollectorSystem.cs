@@ -11,6 +11,11 @@ namespace Maestro.Systems
         {
         }
 
+        protected override void OnUnloadSystem()
+        {
+            
+        }
+
         protected override void OnTick(float deltaTime)
         {
             GC.Collect();
