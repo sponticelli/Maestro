@@ -25,6 +25,7 @@ namespace Maestro.Systems
         
         private Camera _camera;
         private Vector3 _lastMousePosition;
+        private Vector3 _mouseWorldPoint;
 
         protected override void OnLoadSystem()
         {
@@ -70,11 +71,8 @@ namespace Maestro.Systems
         {
             var mousePosition = Input.mousePosition;
             mousePosition.z = 0;
-
-            if (_lastMousePosition == mousePosition) return;
-            
-            var mouseWorldPoint = _camera.ScreenToWorldPoint(mousePosition);
-            _mouseMovementEvent?.Raise(mouseWorldPoint);
+            _mouseWorldPoint = _camera.ScreenToWorldPoint(mousePosition);
+            _mouseMovementEvent?.Raise(_mouseWorldPoint);
             _lastMousePosition = mousePosition;
         }
         

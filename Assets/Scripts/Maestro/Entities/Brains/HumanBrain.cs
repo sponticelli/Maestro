@@ -43,17 +43,17 @@ namespace Maestro.Entities
             //calculate the direction to the target
             var direction = _target - (Vector2)transform.position;
             var magnitude = direction.magnitude;
-            if (magnitude > 0.1f)
-            {
-                //calculate the speed we should be moving at
-                _currentSpeed += _acceleration * Time.deltaTime;
-                if (_currentSpeed > _maxSpeed) _currentSpeed = _maxSpeed;
-            }
-            else
-            {
-                //stop moving
-                _currentSpeed = 0f;
-            }
+            // if (magnitude > 0.1f)
+            // {
+            //     //calculate the speed we should be moving at
+            //     _currentSpeed = _maxSpeed;
+            // }
+            // else
+            // {
+            //     //stop moving
+            //     _currentSpeed = 0f;
+            // }
+            _currentSpeed = _maxSpeed;
 
             _mover.Move(direction, _currentSpeed);
         }
