@@ -5250,5 +5250,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mover: {fileID: 1692726636}
-  _maxSpeed: 0.03
-  _acceleration: 0.0005
+  _maxSpeed: 0.04
+  _acceleration: 0.00025

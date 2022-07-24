@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 313033108}
   - component: {fileID: 313033110}
   m_Layer: 0
-  m_Name: CameraBrain
+  m_Name: inmeraBrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,21 +1092,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 517325660, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
-      propertyPath: m_Radius
-      value: 0.04005558
-      objectReference: {fileID: 0}
-    - target: {fileID: 517325660, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6872910797542507675, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.08
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6872910797542507675, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.08
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872910797542507675, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872910797542507675, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0402
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872910797542507676, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
+      propertyPath: m_Color.a
+      value: 0.4745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872910797542507676, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.41799998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872910797542507676, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.41799998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872910797542507676, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.41799998
       objectReference: {fileID: 0}
     - target: {fileID: 6872910797681625491, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
       propertyPath: m_Name
@@ -1122,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6872910797681625492, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.21
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 6872910797681625492, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1156,14 +1172,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6872910798189061347, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872910798189061347, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.08
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f598a0eb1ffee458fbbf1f8b60f1ec5b, type: 3}
 --- !u!1001 &8992168810739403964
@@ -1173,14 +1181,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1692726639, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: _maxSpeed
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 1692726639, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: _acceleration
-      value: 0.00025
-      objectReference: {fileID: 0}
     - target: {fileID: 4789832496124335721, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
       propertyPath: m_Name
       value: HumanPlayer
