@@ -1,4 +1,4 @@
-namespace Maestro.Entities
+namespace Maestro.Players
 {
     public interface IBrain
     {

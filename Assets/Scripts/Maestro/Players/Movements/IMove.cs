@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Maestro.Entities
+namespace Maestro.Players
 {
     public interface IMove
     {
