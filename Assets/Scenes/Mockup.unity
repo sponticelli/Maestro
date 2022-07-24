@@ -208,14 +208,14 @@ MonoBehaviour:
   m_Follow: {fileID: 1692726637}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 2.4
+    OrthographicSize: 3.2
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0062435, y: 1}
+    m_SensorSize: {x: 2.124347, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313033107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.24000007, z: -10}
+  m_LocalPosition: {x: 0, y: 0.32000008, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -315,10 +315,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.5, y: 8}
-      - {x: 5.5, y: 8}
-      - {x: 5.5, y: -8}
-      - {x: -5.5, y: -8}
+    - - {x: -9, y: 13}
+      - {x: 9, y: 13}
+      - {x: 9, y: -13}
+      - {x: -9, y: -13}
 --- !u!1 &401534899
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.4
+  orthographic size: 3.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -476,7 +476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.24000007, z: -10}
+  m_LocalPosition: {x: 0, y: 0.32000008, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -977,7 +977,7 @@ Transform:
   m_GameObject: {fileID: 1703165428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1197757357}
@@ -1173,6 +1173,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1692726639, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
+      propertyPath: _maxSpeed
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 1692726639, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
       propertyPath: _acceleration
       value: 0.00025
