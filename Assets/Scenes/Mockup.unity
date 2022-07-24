@@ -2799,30 +2799,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 341202870, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 341202870, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 341202870, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341202870, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341202870, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 341202870, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4789832496124335721, guid: d3b46942988f24a22a6fb67503d46117, type: 3}
       propertyPath: m_Name
       value: HumanPlayer
