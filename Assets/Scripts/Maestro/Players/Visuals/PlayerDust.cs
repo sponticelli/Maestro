@@ -18,9 +18,9 @@ namespace Maestro.Players
                 _particleSystem = GetComponent<ParticleSystem>();
         }
 
-        public void Move(Vector2 direction, float speed)
+        public void Move(double angle, Vector2 direction, float speed)
         {
-            _currentAngle = MathHelper.Angle(Vector3.zero, direction);
+            _currentAngle = angle;
             var deltaAngle = _currentAngle - _previousAngle;
             if (deltaAngle > 180) deltaAngle -= 360;
             if (deltaAngle < -180) deltaAngle += 360;

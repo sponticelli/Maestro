@@ -51,7 +51,7 @@ namespace Maestro.Players
             _currentSpeed += _acceleration;
             if (_currentSpeed > _maxSpeed) _currentSpeed = _maxSpeed;
 
-            _mover.Move(direction, _currentSpeed);
+            _mover.Move(_target, direction, _currentSpeed);
             _previousAngle = _currentAngle;
         }
 

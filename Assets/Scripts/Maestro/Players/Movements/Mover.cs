@@ -6,14 +6,14 @@ using LiteNinja.MathUtils;
 
 namespace Maestro.Players
 {
-    public class Mover : MonoBehaviour, IMove
+    public class Mover : MonoBehaviour
     {
         private readonly List<IMove> _iMoves = new();
 
         private void OnEnable()
         {
             AddChildrenMoves();
-            DispatchMovement(Vector2.zero, 0);
+            DispatchMovement(0, Vector2.zero, 0);
         }
 
         private void AddChildrenMoves()
@@ -28,15 +28,15 @@ namespace Maestro.Players
         }
 
 
-        private void DispatchMovement(Vector2 direction, float speed)
+        private void DispatchMovement(double angle, Vector2 direction, float speed)
         {
             foreach (var move in _iMoves)
             {
-                move.Move(direction, speed);
+                move.Move(angle, direction, speed);
             }
         }
 
-        public void Move(Vector2 direction, float speed)
+        public void Move(Vector2 vector2, Vector2 direction, float speed)
         {
             const double piOver180 = Math.PI / 180; //TODO Move to MathHelper
             direction.Normalize();
@@ -50,14 +50,14 @@ namespace Maestro.Players
                     Math.Sin(piOver180 * angle) * speed * Time.deltaTime * 50f;
 
             transform.position = new Vector3((float)x, (float)y, (float)y / 100f);
-            DispatchMovement(direction, direction.x != 0 || direction.y != 0 ? speed : 0);
+            DispatchMovement(angle, direction, direction.x != 0 || direction.y != 0 ? speed : 0);
         }
 
  
         public void SetPosition(Vector2 position)
         {
             transform.position = position;
-            DispatchMovement(Vector2.zero, 0);
+            DispatchMovement(0, Vector2.zero, 0);
         }
     }
 }

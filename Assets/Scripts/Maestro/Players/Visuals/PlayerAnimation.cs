@@ -20,7 +20,7 @@ namespace Maestro.Players
             if (!_spriteRenderer) _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        public void Move(Vector2 direction, float speed)
+        public void Move(double angle, Vector2 direction, float speed)
         {
             switch (speed)
             {

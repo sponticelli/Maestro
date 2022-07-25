@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 313033108}
   - component: {fileID: 313033110}
   m_Layer: 0
-  m_Name: inmeraBrain
+  m_Name: CameraBrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
